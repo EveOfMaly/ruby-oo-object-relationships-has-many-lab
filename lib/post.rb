@@ -1,33 +1,95 @@
-class Post 
-    @@all = [] 
 
-    attr_accessor :title, :author
+class Post
 
-    def initialize(title)
-        @title = title 
-        @@all << self 
-    end
+        attr_accessor :author, :title
+        @@all = []
 
-    def self.all 
-        @@all 
-    end 
-
-
-    def author_name 
-        if self.author 
-            return self.author.name
-        else
-            return nil
+        def initialize(title)
+            @title = title 
+            @@all << self 
         end
-    end
+
+        def self.all
+            @@all
+        end
+
+        def author_name
+            if self.author 
+                self.author.name
+            else
+                return nil 
+            end
+        end
+end
 
 
-    def add_post_by_title(title)
-        @title = title 
-        new_post = Post.new(title)
-        title.post = self 
-        title.post
-    end
 
 
-end 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class Post 
+#     @@all = [] 
+
+#     attr_accessor :title, :author
+
+#     def initialize(title)
+#         @title = title 
+#         @@all << self 
+#     end
+
+#     def self.all 
+#         @@all 
+#     end 
+
+
+#     def author_name 
+#         if self.author 
+#             return self.author.name
+#         else
+#             return nil
+#         end
+#     end
+
+
+
+
+# end 
